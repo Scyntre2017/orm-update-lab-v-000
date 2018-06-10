@@ -27,7 +27,9 @@ class Student
   end
 
   def self.create(name, grade)
-    self.new(name, grade)
+    @name = name
+    @grade = grade
+    save
   end
 
   def save
