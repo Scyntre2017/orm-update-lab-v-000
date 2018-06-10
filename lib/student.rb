@@ -42,7 +42,7 @@ class Student
       WHERE name = ?;
     SQL
 
-    student_row = DB[:conn].execute(sql, name)
+    student_row = DB[:conn].execute(sql, name)[0]
     student = self.new_from_db(student_row)
     student
     binding.pry
