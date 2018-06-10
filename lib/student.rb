@@ -45,6 +45,7 @@ class Student
     student_row = DB[:conn].execute(sql, name)
     student = self.new_from_db(student_row)
     student
+    binding.pry
   end
 
   def save
